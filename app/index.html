@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title> Project Preview </title>
+    <script src="https://ui5.sap.com/1.136.9/resources/sap-ui-core.js" 
+            id="sap-ui-bootstrap"
+            data-sap-ui-theme="sap_horizon"
+            data-sap-ui-bindingSyntax="complex" 
+            data-sap-ui-xx-bindingSyntax="complex"
+            data-sap-ui-resourceroots='{"assets": "assets"}' 
+            data-sap-ui-libs="sap.m,sap.uxap,sap.ui.layout,sap.f">
+    </script>
+    <link rel="stylesheet" href="assets/preview.css">
+</head>
+
+<body id="body" class="sapUiBody">
+    <script>
+        "use strict";
+        sap.ui.localResources("assets");
+        (function (jQuery, App, Page) {
+            sap.ui.getCore().attachInit(function () {
+                sap.ui.define([
+                    "sap/ui/core/mvc/Controller",
+                    "sap/ui/model/json/JSONModel"
+                ], function (Controller, JSONModel) {
+                    return Controller.extend("PreviewController", {
+                        onInit: function () {
+
+                            const data = {"Services":[{"ServiceName":"appProductosProCodeSrv","DetailsURL":"./service/appProductosProCode/","Metadata":"./service/appProductosProCode/$metadata","Entities":[{"Name":"Productos","URL":"./service/appProductosProCode/Productos","FioriURL":"$fiori-preview/appProductosProCodeSrv/Productos#preview-app"},{"Name":"Proveedores","URL":"./service/appProductosProCode/Proveedores","FioriURL":"$fiori-preview/appProductosProCodeSrv/Proveedores#preview-app"},{"Name":"Compras","URL":"./service/appProductosProCode/Compras","FioriURL":"$fiori-preview/appProductosProCodeSrv/Compras#preview-app"},{"Name":"Clientes","URL":"./service/appProductosProCode/Clientes","FioriURL":"$fiori-preview/appProductosProCodeSrv/Clientes#preview-app"}],"EntitiesCount":4}]}
+                            this.getView().setModel(new JSONModel(data));
+                        }
+                    });
+                });
+                var oApp = new App()
+                var previewView = sap.ui.view({
+                    viewName: "assets.Preview",
+                    type: sap.ui.core.mvc.ViewType.XML
+                });
+                oApp.addPage(new Page({
+                    content: [previewView],
+                    showHeader: false
+                })).placeAt("content");
+            });
+
+        }(jQuery, sap.m.App, sap.m.Page));
+    </script>
+    <div id="content"></div>
+</body>
+
+</html>

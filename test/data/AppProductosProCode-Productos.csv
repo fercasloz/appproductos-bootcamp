@@ -1,0 +1,6 @@
+ID;nombre;precio;cantidadEnStock;descripcion;proveedor_ID
+105c82f9-769b-4228-ac53-cbc094913c49;Paracetamol;1200.50;10;Analgésico y antipirético;105c82f9-769b-4228-ac53-cbc094913c49
+1a5fde40-26ce-4e8e-9b1e-286aa4f87e09;Ibuprofeno;800.00;25;Antiinflamatorio no esteroideo;1a5fde40-26ce-4e8e-9b1e-286aa4f87e09
+1b46c0cb-53f2-41d6-bc8c-14d104ae21c5;Amoxicilina;150.00;50;Antibiótico de amplio espectro;1b46c0cb-53f2-41d6-bc8c-14d104ae21c5
+2ce2370a-3801-4859-8ddc-039eb0567332;Omeprazol;250.00;30;Inhibidor de la bomba de protones;2ce2370a-3801-4859-8ddc-039eb0567332
+b9523449-4594-4a58-a349-ff0bd0efb808;Loratadina;100.00;40;Antihistamínico para alergias;b9523449-4594-4a58-a349-ff0bd0efb808

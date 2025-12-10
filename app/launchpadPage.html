@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{appTitle}}</title>
+
+        <script>
+            window["sap-ushell-config"] = {
+  "defaultRenderer": "fiori2",
+  "renderers": {
+    "fiori2": {
+      "componentData": {
+        "config": {
+          "enableSearch": false
+        }
+      }
+    }
+  },
+  "applications": {
+    "appproductosprocodeclientes-display": {
+      "title": "Clientes",
+      "description": "App para clientes",
+      "applicationType": "URL",
+      "navigationMode": "newWindowThenEmbedded",
+      "url": "./appproductosprocode.clientes/webapp",
+      "additionalInformation": "SAPUI5.Component=appproductosprocode.clientes"
+    },
+    "appproductosprocodecompras-display": {
+      "title": "Compras",
+      "description": "App para compras",
+      "applicationType": "URL",
+      "navigationMode": "newWindowThenEmbedded",
+      "url": "./appproductosprocode.compras/webapp",
+      "additionalInformation": "SAPUI5.Component=appproductosprocode.compras"
+    },
+    "appproductosprocodeproductos-display": {
+      "title": "Productos",
+      "description": "App de los productos",
+      "applicationType": "URL",
+      "navigationMode": "newWindowThenEmbedded",
+      "url": "./appproductosprocode.productos/webapp",
+      "additionalInformation": "SAPUI5.Component=appproductosprocode.productos"
+    },
+    "appproductosprocodeproveedores-display": {
+      "title": "Proveedores",
+      "description": "App para proveedores",
+      "applicationType": "URL",
+      "navigationMode": "newWindowThenEmbedded",
+      "url": "./appproductosprocode.proveedores/webapp",
+      "additionalInformation": "SAPUI5.Component=appproductosprocode.proveedores"
+    }
+  }
+};
+        </script>
+        <link rel="stylesheet" href="assets/launchpad.css">
+        <script src="https://ui5.sap.com/1.136.9/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+        <script
+            src="https://ui5.sap.com/1.136.9/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m, sap.ushell, sap.fe.templates"
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-theme="sap_horizon"
+            data-sap-ui-frameOptions="allow"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-xx-viewCache="false"
+        ></script>
+        <script>
+            sap.ui.getCore().attachInit(function() {
+                sap.ushell.Container.createRenderer("fiori2", true).then(function(oRenderer) {
+                  oRenderer.placeAt('content');
+                });
+            });
+        </script>
+    </head>
+    <body class="sapUiBody" id="content"></body>
+</html>
